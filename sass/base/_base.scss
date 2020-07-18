@@ -1,0 +1,19 @@
+//main:../main.scss
+//main:../main.scss
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html{
+font-size: 62.5%;
+}
+
+body{
+  font-family: 'Source Sans Pro','Nunito', sans-serif;
+  line-height: 1.7;
+  padding: 0 4rem;
+  font-weight: 300;
+  box-sizing: border-box;
+}
