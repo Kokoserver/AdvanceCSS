@@ -67,14 +67,14 @@ body {
   display: block;
   font-size: 6rem;
   letter-spacing: 1rem;
-  animation: moveInRight 1.5s;
+  animation: moveInRight 2s;
 }
 
 .heading-sub {
   display: block;
   font-size: 3rem;
   letter-spacing: 1rem;
-  animation: moveInLeft 1s;
+  animation: moveInLeft 2s;
 }
 
 .margin-top-small {
@@ -126,7 +126,7 @@ body {
   margin-top: 1rem;
   box-shadow: 0 0.8rem 2rem black;
   position: relative;
-  animation: moveInButtom 3s;
+  animation: moveInButtom 2.5s;
 }
 
 .btn:link::after, .btn:visited::after {
@@ -167,7 +167,6 @@ body {
 
 .row {
   max-width: 160rem;
-  background-color: #eee;
   margin: 0 auto;
 }
 
@@ -183,7 +182,6 @@ body {
 
 .row [class^="column-"] {
   float: left;
-  background-color: #cb3737;
 }
 
 .row [class^="column-"]:not(:last-child) {
@@ -214,36 +212,38 @@ body {
   width: auto;
   height: 100vh;
   padding: 3rem 0;
-  background-image: linear-gradient(to right bottom, #ee6f57, #cb3737);
+  background-image: linear-gradient(to right bottom, #ee6f57, #cb3737), url(../images/hero-3.png);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   position: relative;
+  text-align: center;
 }
 
 .navigation {
   width: 100%;
   height: 10%;
   position: relative;
-  text-align: center;
 }
 
 .navigation__logo-box {
   position: absolute;
-  top: 0rem;
-  left: 0rem;
+  top: 2.1rem;
+  left: 5rem;
 }
 
 .navigation__logo {
   height: 5rem;
-  margin-right: 2rem;
   display: inline-block;
 }
 
 .navigation__nav {
   float: right;
   font-size: 1.8rem;
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
 }
 
 .navigation__list {
@@ -269,6 +269,5 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  transform: translate(-50%, -65%);
 }
