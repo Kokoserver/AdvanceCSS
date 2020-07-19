@@ -1,0 +1,63 @@
+//main:../main.scss
+.header{
+  width: auto;
+  height: 100vh;
+  padding: 3rem 0;
+  background-image: linear-gradient(to right bottom, $secondary-light, $secondary);
+  background-blend-mode:multiply;
+  background-size: cover;
+  background-position: center center;
+  clip-path:polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+
+.navigation{
+  width: 100%;
+  height: 10%;
+  position: relative;
+  text-align: center;
+&__logo-box{
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+}
+  &__logo{
+    height: 5rem;
+    margin-right: 2rem;
+    display: inline-block;
+
+  }
+ &__nav{
+   float: right;
+   font-size: 1.8rem;
+ }
+
+&__list{
+  list-style: none;
+  display: inline-block;
+  &:not(:last-child){
+    margin-right: 2rem;
+  }
+}
+&__link,&__link:visited, &:link{
+color: $white;
+text-decoration: none;
+text-transform: uppercase;
+}
+&__link:hover{
+  border-bottom: .1rem solid $secondary;
+}
+}
+
+.text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+
+
+
+
+}

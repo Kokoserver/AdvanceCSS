@@ -1,0 +1,53 @@
+//main:../main.scss
+.btn:link, .btn:visited{
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: $secondary;
+  background-color: $primary;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  text-transform: capitalize;
+  z-index: 10rem;
+  margin-top: 1rem;
+  box-shadow: 0 .8rem 2rem rgba($black, 1);
+  position: relative;
+  animation: moveInButtom 3s;
+  &::after{
+    content: "";
+    display: inline-block;
+    height:100%;
+    width: 100%;
+    background-color: $white;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+  }
+  &:hover::after{
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity:0;
+  }
+
+  &:hover{
+    transition: all .2s;
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, .5);
+  }
+
+  &:active{
+    transform: translateY(.1rem);
+    box-shadow: 0 .5rem 1rem rgba($black, .5);
+  }
+
+}
+
+.btn-animated{
+  &:active{
+    transform: translateY(-.8rem);
+    box-shadow: 0  0.2rem 0.5rem $black;
+    transition: all .2s;
+  }
+}

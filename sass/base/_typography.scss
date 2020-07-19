@@ -1,2 +1,19 @@
 //main:../main.scss
 // this page will consist something like headings design paragrapgh design
+.heading-primary{
+  color: white;
+  text-transform: uppercase;
+
+}
+.heading-primary-main{
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  animation: moveInRight 1.5s;
+}
+.heading-sub{
+  display: block;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  animation: moveInLeft 1s;
+}
