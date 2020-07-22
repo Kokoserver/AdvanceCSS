@@ -1,0 +1,110 @@
+//main:../main.scss
+.btn:link, .btn:visited{
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  cursor: pointer;
+  color: $secondary;
+  background-color: $primary-light;
+  text-transform: capitalize;
+  z-index: 10rem;
+  margin-top: 1rem;
+  box-shadow: 0 .8rem 2rem rgba($black, .3);
+  position: relative;
+  animation: moveInBottom 2.5s;
+  font-weight: 700;
+  @include buttonBackgound-after($primary-gray);
+  &:hover::after{
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity:0;
+  }
+
+  &:hover{
+    transition: all .2s;
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, .5);
+  }
+
+  &:active{
+    transform: translateY(.1rem);
+    box-shadow: 0 .5rem 1rem rgba($black, .5);
+  }
+
+}
+.btn-inverse:link, .btn-inverse:visited{
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  color:  $primary-gray;
+  cursor: pointer;
+  background-color:$secondary;
+  text-transform: capitalize;
+  z-index: 10rem;
+  margin-top: 1rem;
+  box-shadow: 0 .8rem 2rem rgba($black, .3);
+  position: relative;
+  animation: moveInBottom 2.5s;
+  font-weight: 700;
+  @include buttonBackgound-after($secondary);
+  &:hover::after{
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity:0;
+  }
+
+  &:hover{
+    transition: all .2s;
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($black, .5);
+  }
+
+  &:active{
+    transform: translateY(.1rem);
+    box-shadow: 0 .5rem 1rem rgba($black, .5);
+  }
+
+}
+
+[type$="submit"], button{
+  text-decoration: none;
+  display: block;
+  color:  $primary-gray;
+  background-color:$secondary;
+  text-transform: uppercase;
+  z-index: 10rem;
+  margin-top: 2rem;
+  border: none;
+  width: 80%;
+  box-shadow: 0 .8rem 2rem rgba($black, .3);
+  position: relative;
+  font-weight: 700;
+  outline: none;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn-white{
+  color: $secondary;
+  background-color: $primary-light;
+}
+
+.btn-light{
+  color: $secondary;
+  background-color: $primary-gray;
+}
+
+.btn-medium{
+  font-size: 2.4rem;
+  padding: 1.5rem 4rem;
+}
+
+.btn-small{
+  font-size: 1.8rem;
+  padding: 1rem 1.8rem;
+}
+.btn-animated{
+  &:active{
+    transform: translateY(-.8rem);
+    box-shadow: 0  0.2rem 0.5rem $black;
+    transition: all .2s;
+  }
+}

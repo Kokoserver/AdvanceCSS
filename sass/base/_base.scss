@@ -13,7 +13,13 @@ font-size: 62.5%;
 body{
   font-family: 'Source Sans Pro','Nunito', sans-serif;
   line-height: 1.7;
-  padding: 0 4rem;
-  font-weight: 300;
+  font-weight: 400;
   box-sizing: border-box;
+  padding:1rem 3rem;
+  background-color: $primary-light;
+  overflow-x: hidden;
+}
+
+img{
+  object-fit:cover;
 }

@@ -1,2 +1,40 @@
 //main:../main.scss
 // this page will consist something like headings design paragrapgh design
+.heading-primary{
+  color: white;
+  text-transform: uppercase;
+
+}
+.heading-primary-main{
+  display: block;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  animation: moveInRight 1.5s;
+}
+.heading-sub{
+  display: block;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  animation: moveInLeft 1.5s;
+}
+
+.section-heading{
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border-bottom: .5rem solid $secondary;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph{
+  &:not(:last-child){
+  padding-bottom: 1.5rem;
+  }
+  font-size: 2rem;
+  font-weight:400;
+  text-align: text-align;
+}

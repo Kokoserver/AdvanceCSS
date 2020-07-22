@@ -1,0 +1,61 @@
+//main:../main.scss
+.header{
+  height: 96vh;
+  padding: 3rem 0;
+  padding-bottom: 5rem;
+  background-image: url(../images/hero-4.png);
+  background-blend-mode:darken;
+  background-size: cover;
+  background-position:center center;
+  clip-path:polygon(0 0, 100% 0, 100% 74%, 0 100%);
+  text-align: center;
+}
+
+.navigation{
+  width: 100%;
+  height: 100%;
+  position: relative;
+&__logo-box{
+  position: absolute;
+  top: 2.1rem;
+  left: 5rem;
+}
+  &__logo{
+    position: fixed;
+    top:5rem;
+    left: 20rem;
+    height: 5rem;
+    z-index: 100;
+  }
+ &__nav{
+   position: fixed;
+   float: right;
+   font-size: 1.8rem;
+   top:5rem;
+   right: 20rem;
+   z-index: 100;
+ }
+
+&__list{
+  list-style: none;
+  display: inline-block;
+  &:not(:last-child){
+    margin-right: 2rem;
+  }
+}
+&__link,&__link:visited, &:link{
+color: $white;
+text-decoration: none;
+text-transform: uppercase;
+}
+&__link:hover{
+  border-bottom: .1rem solid $primary-gray;
+}
+}
+
+.text-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
