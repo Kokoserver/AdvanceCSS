@@ -1,0 +1,104 @@
+//main:../main.scss
+.card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  text-align: center;
+  background-color: $primary;
+  padding-bottom: 10%;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba($black, .2);
+  z-index: 30;
+  animation: fadeInBottom .7s;
+  backface-visibility: hidden;
+
+  // &:hover{
+  //   box-shadow: 0 .1rem 2rem rgba($black, .1);
+  //   transform: translateY(-.7rem);
+  //   transition: all .5s;
+  //   font-weight: 700;
+  // }
+  &__img--1{
+   @include card-imge($tertiary-1a, $tertiary-light-1b, '../images/hero-2.jpg');
+   background-blend-mode: color;
+   filter: brightness(50%);
+   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+  }
+
+  &__img--2{
+    @include card-imge($secondary,$secondary-light, '../images/hero-2.jpg');
+    background-blend-mode: color;
+    filter: brightness(50%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+  }
+
+  &__img--3{
+    @include card-imge($tertiary-2a, $tertiary-light-2b, '../images/hero-2.jpg');
+    background-blend-mode: color;
+    filter: brightness(50%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100% );
+  }
+  &__body{
+    width: 100%;
+    padding:0 1rem;
+
+  }
+  &__title{
+    font-size: 3rem;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 3rem;
+    color:$white;
+    width: 60%;
+    text-transform: uppercase;
+  }
+
+  &__span{
+    padding: 1rem 2.5rem;
+    -webkit-box-decoration-break: clone;
+    &-1{
+      background-image: linear-gradient(to right bottom, rgba($tertiary-1a, .85), rgba($tertiary-light-1b, .85));
+
+    }
+    &-2{
+      background-image: linear-gradient(to right bottom, rgba($secondary, .85), rgba($secondary-light, .85));
+
+    }
+    &-3{
+      background-image: linear-gradient(to right bottom, rgba($tertiary-2a, .85), rgba($tertiary-light-2b, .85));
+
+    }
+  }
+
+  &__paragraph{
+    padding:  2rem 0;
+  }
+}
+
+
+.simple-card{
+  background-image: repeating-linear-gradient($primary, $primary-light);
+  background-blend-mode: darken;
+  text-align: left;
+  padding: 2rem;
+  box-shadow: 0 1rem 2rem rgba($black, .2);
+  animation: fadeInBottom1 .8s;
+  text-align: center;
+  z-index: 30;
+  backface-visibility: hidden;
+  &:hover{
+    box-shadow: 0 .1rem 2rem rgba($black, .1);
+    transform: translateY(-.7rem);
+    transition: all .5s;
+    font-weight: 700;
+  }
+
+  &-header{
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+}

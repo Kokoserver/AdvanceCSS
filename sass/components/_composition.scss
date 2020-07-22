@@ -1,0 +1,50 @@
+//main:../main.scss
+.composition{
+  position: relative;
+  animation: fadeInLeft 3s;
+&__img-box{
+  display: inline-block;
+  z-index: 10;
+  backface-visibility: hidden;
+  padding-right: 2rem;
+
+}
+
+&__img{
+  width: 70%;
+  position: absolute;
+  box-shadow: 0 1rem 2rem rgba($black, .9);
+  transition: transform .3s;
+  border-radius: .1rem;
+
+
+  &--1{
+    &:hover{
+       z-index: 100;
+       transform: scale(1.2) translateY(2rem);
+    }
+    backface-visibility: hidden;
+    top: 7rem;
+    right: 1rem;
+  }
+  &--2{
+    top: 9rem;
+    left: 10rem;
+    backface-visibility: hidden;
+    &:hover{
+      z-index: 100;
+       transform: scale(1.2) translateY(2rem);
+    }
+  }
+  &--3{
+    top: 13.7rem;
+    right: 11rem;
+    backface-visibility: hidden;
+    &:hover{
+       z-index: 100;
+       transform: scale(1.2) translateY(2rem);
+    }
+  }
+}
+
+}

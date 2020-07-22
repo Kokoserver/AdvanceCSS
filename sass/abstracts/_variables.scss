@@ -6,9 +6,19 @@ $primary-gray:#e3e3e3; // section background
 $secondary:#cb3737; // buttons, logo, nav-link visite
 $secondary-light:#ee6f57; // inlustrations
 
+$tertiary-1a:#061f78;
+$tertiary-light-1b:#02218f;
+
+$tertiary-2a:#06783a;
+$tertiary-light-2b:#088742;
+
 $black:#000;
 $white:#fff;
 // Grid layout
-$grid-width:160rem; // grid-with defailt is 114rem
-$grid-gutter:8rem; // column margin left
-$grid-space:6rem; // grid margin top and buttom
+$grid-width:114rem; // grid-with defailt is 114rem
+$grid-gutter:4rem; // column margin left
+$grid-space:2rem; // grid margin top and buttom
+
+//font-size
+$default-padding:28rem 0;
+$section-padding-small:15rem 0;

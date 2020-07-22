@@ -1,0 +1,67 @@
+//main:../main.scss
+
+.form{
+  list-style: none;
+  width: 80%;
+  &__group{
+    &:not(:last-child){
+      margin: 3.7rem auto;
+    }
+    padding: 1.2rem auto;
+    position: relative;
+    &-textarea{
+      display: block;
+      border: none;
+      outline: none;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 1rem 2rem rgba($black, .2);
+      margin-top: 3rem;
+      border-radius: .3rem;
+      font-family: inherit;
+      width: 100%;
+      transition: all .3s ease;
+      &:focus{
+        box-shadow: 0 1rem 2rem rgba($black, .1);
+      }
+    }
+    &-input{
+      display: block;
+      border: none;
+      outline: none;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 1rem 1.5rem rgba($black, .2);
+      width: 100%;
+      border-bottom: .3rem solid transparent;
+      border-radius: .3rem;
+      font-family: inherit;
+      transition: all .3s ease;
+      &:focus:invalid{
+        border-bottom: .3rem solid $secondary;
+      }
+    margin-top: auto;
+      &:focus{
+        box-shadow: 0 .5rem 1.5rem rgba($black, .1);
+        border-bottom: .3rem solid #0ccf65;
+      }
+
+      &::placeholder{
+        color: #777;
+      }
+    }
+    &-label{
+      position: absolute;
+      left: 2.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: .7rem;
+      display: block;
+      text-transform: capitalize;
+    }
+    &-input:placeholder-shown + &-label{
+     opacity: 0;
+     visibility: hidden;
+     transform: translateY(-4rem)
+    }
+  }
+
+}
