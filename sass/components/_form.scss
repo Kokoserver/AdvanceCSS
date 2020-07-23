@@ -20,6 +20,10 @@
       font-family: inherit;
       width: 100%;
       transition: all .3s ease;
+      &::placeholder{
+        color: #777;
+        text-transform: capitalize;
+      }
       &:focus{
         box-shadow: 0 1rem 2rem rgba($black, .1);
       }
@@ -46,6 +50,7 @@
 
       &::placeholder{
         color: #777;
+        text-transform: capitalize;
       }
     }
     &-label{

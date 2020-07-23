@@ -1,0 +1,47 @@
+//main:../main.scss
+
+.footer{
+  padding: 10rem 0;
+  margin:0 auto;
+  width: 100%;
+  height: 30vh;
+  text-align: center;
+  backface-visibility: hidden;
+  &-logo-box{
+    width: auto;
+    height: 100%;
+  }
+  &-logo{
+    height: 50%;
+    width: 20%;
+    margin:0 auto;
+  }
+
+  &-social-link a:link, a:visited {
+    display: inline-block;
+    margin:1.8rem auto;
+    font-size: 2.4rem;
+    &:not(:last-child) {
+      padding-right:2rem;
+    }
+   display: inline-block;
+   font-size: 2.3rem;
+   color: $primary-light;
+   z-index: 2;
+   background: $secondary;
+   text-align: center;
+   width: 4rem;
+   height: 100%;
+   border-radius: 50%;
+   transition: all .3s;
+   &:hover{
+     transform: scale(1.2);
+   }
+  }
+  &-copyright{
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+    text-transform: capitalize;
+  }
+}
