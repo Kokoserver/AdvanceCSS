@@ -26,7 +26,6 @@ text-align: center;
   width: 100%;
   padding: 0 5rem;
   font-size: 2.4rem;
-  text-indent:10rem;
   margin-bottom: 5rem;
 }
 }
@@ -116,6 +115,8 @@ text-align: center;
   background-color: $primary;
   text-align: center;
   backface-visibility: hidden;
+  padding-left: 2rem;
+  padding-left: 3rem;
   &, &-heading{
     padding-top:1.7rem;
     text-align: left;
