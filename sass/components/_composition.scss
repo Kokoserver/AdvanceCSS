@@ -4,7 +4,6 @@
   animation: fadeInLeft 3s;
 &__img-box{
   display: inline-block;
-  z-index: 10;
   backface-visibility: hidden;
   padding-right: 2rem;
 
@@ -20,7 +19,6 @@
 
   &--1{
     &:hover{
-       z-index: 100;
        transform: scale(1.2) translateY(2rem);
     }
     backface-visibility: hidden;
@@ -32,7 +30,6 @@
     left: 10rem;
     backface-visibility: hidden;
     &:hover{
-      z-index: 100;
        transform: scale(1.2) translateY(2rem);
     }
   }
@@ -41,7 +38,6 @@
     right: 11rem;
     backface-visibility: hidden;
     &:hover{
-       z-index: 100;
        transform: scale(1.2) translateY(2rem);
     }
   }

@@ -9,17 +9,9 @@
   padding-bottom: 10%;
   border-radius: .5rem;
   overflow: hidden;
-  box-shadow: 0 1rem 2rem rgba($black, .2);
-  z-index: 30;
+  box-shadow: 0 1rem 2rem rgba($black, .5);
   animation: fadeInBottom .7s;
   backface-visibility: hidden;
-
-  // &:hover{
-  //   box-shadow: 0 .1rem 2rem rgba($black, .1);
-  //   transform: translateY(-.7rem);
-  //   transition: all .5s;
-  //   font-weight: 700;
-  // }
   &__img--1{
    @include card-imge($tertiary-1a, $tertiary-light-1b, '../images/hero-2.jpg');
    background-blend-mode: color;
@@ -87,7 +79,6 @@
   box-shadow: 0 1rem 2rem rgba($black, .2);
   animation: fadeInBottom1 .8s;
   text-align: center;
-  z-index: 30;
   backface-visibility: hidden;
   &:hover{
     box-shadow: 0 .1rem 2rem rgba($black, .1);

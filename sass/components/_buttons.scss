@@ -7,7 +7,6 @@
   color: $secondary;
   background-color: $primary-light;
   text-transform: capitalize;
-  z-index: 10rem;
   margin-top: 1rem;
   box-shadow: 0 .8rem 2rem rgba($black, .3);
   position: relative;
@@ -39,7 +38,6 @@
   cursor: pointer;
   background-color:$secondary;
   text-transform: capitalize;
-  z-index: 10rem;
   margin-top: 1rem;
   box-shadow: 0 .8rem 2rem rgba($black, .3);
   position: relative;
@@ -67,10 +65,9 @@
 [type$="submit"], button{
   text-decoration: none;
   display: block;
-  color:  $primary-gray;
   background-color:$secondary;
+  color:  $primary-gray;
   text-transform: uppercase;
-  z-index: 10rem;
   margin-top: 2rem;
   border: none;
   width: 80%;
@@ -80,6 +77,7 @@
   outline: none;
   padding: 2rem 3rem;
   cursor: pointer;
+
 }
 
 .btn-white{
@@ -95,6 +93,16 @@
 .btn-medium{
   font-size: 2.4rem;
   padding: 1.5rem 4rem;
+}
+
+.btn-outline{
+  border: .2rem solid $secondary;
+  background-color:$primary;
+  &:hover{
+         border: none;
+         background-color:$secondary;
+        color:  $primary-gray;
+  }
 }
 
 .btn-small{
