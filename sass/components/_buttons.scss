@@ -30,6 +30,7 @@
   }
 
 }
+
 .btn-inverse:link, .btn-inverse:visited{
   text-decoration: none;
   display: inline-block;
@@ -57,6 +58,30 @@
 
   &:active{
     transform: translateY(.1rem);
+    box-shadow: 0 .5rem 1rem rgba($black, .5);
+  }
+
+}
+
+.btn-normal:link, .btn-normal:visited{
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  color:  $primary-gray;
+  cursor: pointer;
+  background-color:$secondary;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  box-shadow: 0 .8rem 2rem rgba($black, .3);
+  position: relative;
+  animation: moveInBottom 2.5s;
+  font-weight: 700;
+  &:hover{
+    transition: all .2s;
+    box-shadow: 0 1rem 2rem rgba($black, .5);
+  }
+
+  &:active{
     box-shadow: 0 .5rem 1rem rgba($black, .5);
   }
 

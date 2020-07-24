@@ -7,6 +7,12 @@
   }
 }
 
+@mixin posAbs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 @mixin buttonBackgound-after($background-color){
   &::after{
     content: "";

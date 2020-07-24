@@ -2,12 +2,9 @@
 .section__about{
   width: 100%;
   padding: $default-padding;
-  margin-top: -25rem;;
-  background-image: url(../images/about-cover-8.png);
-  background-blend-mode: darken;
+  background-image: url(../images/about-cover-6.png);
   text-align: left;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  padding-top: 25rem;
 &__about-text-box{
   animation: fadeInRight 3s ease;
   padding-bottom: 1.5rem;
@@ -116,7 +113,7 @@ text-align: center;
   padding-left: 2rem;
   padding-left: 3rem;
   &, &-heading{
-    padding-top:1.7rem;
+    padding-top:6rem;
     text-align: left;
   }
     &-details, ul{

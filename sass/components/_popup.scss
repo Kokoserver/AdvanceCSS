@@ -1,13 +1,100 @@
 //main../main.scss
 .popup{
-  background-color: black;
-  opacity: .9;
-  width: 100vw;
+  position: relative;
+  background-color: rgba(black, .8);
+  width: 100%;
   height: 100vh;
   position: fixed;
-  z-index: 150;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s;
+
+  &:target{
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  &__close{
+    &:link, &:visited {
+      font-weight: 700;
+      margin-top: 2rem;
+      color: inherit;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      right: 2rem;
+      font-size: 5rem;
+     color:#F2F2F2; // $primary-light;
+     background:#cb3737; // $secondary;
+     text-align: center;
+     width: 8.5rem;
+     border-radius: 50%;
+     transition: all .3s;
+     &:hover{
+       transform: scale(1) rotate(90deg);
+       box-shadow: 0 1rem 2rem rgba(black, .2);
+     }
+    }
+}
   &__content{
-    width: 70%;
-    background-color:red;
+    width: 75%;
+    background-color:#fff;
+    text-align: left;
+    box-shadow: 0 1rem 2rem rgab(black, .2);
+    border-radius: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: table;
+    overflow: hidden;
+  }
+  &__left{
+   width: 33.3%;
+   display:table-cell;
+  }
+
+  &__img{
+   display: block;
+   width: 100%;
+
+  }
+
+  &__right{
+    width: 66.7%;
+    display:table-cell;
+    vertical-align: middle;
+    padding: 3rem;
+  }
+
+  &__text{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    column-count: 2;
+    column-gap: 4rem; //default is 1em=1.4rem of it's parent
+    column-rule: .1rem solid #e3e3e3; //$primary-gray;
+
+    -moz-column-count: 2;
+    -moz-column-gap: 5rem; //default is 1em=1.4rem of it's parent
+    -moz-column-rule: .1rem solid #e3e3e3; //$primary-gray;
+    -moz-hyphens: auto;
+     hyphens: auto;
+  }
+
+  &__btn{
+    margin-bottom: 3rem;
+  }
+
+&__haading-secondary{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
+
+  &__heading{
+    margin-bottom: 3rem;
   }
 }
