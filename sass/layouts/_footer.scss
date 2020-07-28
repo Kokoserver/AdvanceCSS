@@ -4,17 +4,27 @@
   padding: 10rem 0;
   margin:0 auto;
   width: 100%;
-  height: 30vh;
+  height: 30rem;
   text-align: center;
   backface-visibility: hidden;
+  @include respond(phone){
+      margin:0;
+  }
   &-logo-box{
     width: auto;
     height: 100%;
   }
   &-logo{
     height: 50%;
-    width: 20%;
+    width: 30%;
     margin:0 auto;
+    @include respond(phone){
+        width: 70%;
+    }
+    @include respond(tab-port){
+        width: 100%;
+    }
+
   }
 
   &-social-link a:link, a:visited {

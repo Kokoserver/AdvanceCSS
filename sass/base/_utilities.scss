@@ -1,32 +1,60 @@
 //main:../main.scss
 .margin-top-small{
+  @include respond(phone){
+    margin-top: 1.5rem !important;
+  }
   margin-top: 2rem !important;
 }
 
 .margin-top-medium{
+  @include respond(phone){
+    margin-top: 3rem !important;
+  }
   margin-top: 4rem !important;
 }
 
 .margin-top-big{
   margin-top: 8rem !important;
+  @include respond(phone){
+  margin-top: 6rem !important;
+  }
 }
 
 .padding-top-small{
-  margin-top: 2rem !important;
+  padding-top: 2rem !important;
+  @include respond(phone){
+    padding-top: 1rem !important;
+  }
+
 }
 .padding-top-medium{
-  margin-top: 4rem !important;
+  padding-top: 4rem !important;
+  @include respond(phone){
+    padding-top: 3.5rem !important;
+  }
+
 }
 
 
 .padding-top-big{
   margin-top: 8rem !important;
+  @include respond(phone){
+    padding-top: 6rem !important;
+  }
+
 }
 .padding-right{
-  margin-top: 4rem !important;
+  padding-right: 4rem !important;
+  @include respond(phone){
+    padding-right: 2.5rem !important;
+  }
+
 }
 .padding-left{
-  margin-top: 4rem !important;
+  padding-left: 4rem !important;
+  @include respond(phone){
+    padding-right: 2.5rem !important;
+  }
 }
 .container{
   margin: 0 3rem;
@@ -37,11 +65,11 @@
 .container-expand{
   margin: 0 5rem;
 }
-
 .image-animated-1{
   animation: img-fadeInLeft 2s;
 }
 
 .image-animated-2{
   animation: img-fadeInRight 2s;
+
 }

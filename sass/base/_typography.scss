@@ -7,16 +7,32 @@
 }
 .heading-primary-main{
   display: block;
-  font-size: 5rem;
-  letter-spacing: 1rem;
+  font-size: 5.5rem;
+  letter-spacing: .5rem;
   animation: moveInRight 1.5s;
+  @include respond(tab-port){
+    font-size: 4.5rem;
+    letter-spacing: .2rem;
+  }
+  @include respond(phone){
+    font-size: 2.2rem;
+    letter-spacing: .2rem;
+  }
 }
 .heading-sub{
   display: block;
-  font-size: 2.5rem;
-  letter-spacing: 1rem;
+  font-size: 2rem;
+  letter-spacing: .5rem;
   animation: moveInLeft 1.5s;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
+  @include respond(tab-port){
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+  }
+  @include respond(phone){
+    font-size: 1;
+    letter-spacing: 0rem;
+  }
 }
 
 .section-heading{
@@ -29,6 +45,9 @@
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
+  @include respond(phone){
+    font-size: 1.7rem;
+  }
 }
 
 .paragraph{
@@ -38,4 +57,7 @@
   font-size: 2rem;
   font-weight:400;
   text-align: text-align;
+  @include respond(phone){
+    font-size: 1.7rem;
+  }
 }

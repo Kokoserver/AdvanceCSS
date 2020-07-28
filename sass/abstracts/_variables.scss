@@ -16,8 +16,10 @@ $black:#000;
 $white:#fff;
 // Grid layout
 $grid-width:114rem; // grid-with defailt is 114rem
+$grid-width-small:50rem; // grid-with defailt is 114rem
 $grid-gutter:4rem; // column margin left
-$grid-space:2rem; // grid margin top and buttom
+$grid-space:4rem; // grid margin top and buttom
+$grid-space-small:2rem; // grid margin top and buttom
 
 //font-size
 $default-padding:28rem 0;

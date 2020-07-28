@@ -9,7 +9,12 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s;
-
+  @supports(-webkit-backdrop-filter:blur(10px)) or (backdrop-filter:blur(10px)){
+    backdrop-filter:blur(10px); // this is use to add filter to element behind this element  it works like filter too
+    background-color: rgba(black, .3);
+    //@supports is use to ask the browser if the properties specified is supported if yes
+    //it will applies then if no the current one will be applied
+  }
   &:target{
     opacity: 1;
     visibility: visible;
@@ -44,6 +49,7 @@
     text-align: left;
     box-shadow: 0 1rem 2rem rgab(black, .2);
     border-radius: .5rem;
+    // @include posAbs(50%, 50%, -50%, -50%)
     position: absolute;
     top: 50%;
     left: 50%;
@@ -82,6 +88,11 @@
     -moz-column-rule: .1rem solid #e3e3e3; //$primary-gray;
     -moz-hyphens: auto;
      hyphens: auto;
+     @media (max-width: 37.5em){
+       -moz-column-count: 0;
+        column-count: 0;
+        hyphens: none;
+     }
   }
 
   &__btn{

@@ -1,4 +1,5 @@
 //main:../main.scss
+//float clearfix
 @mixin clearfix{
   &::after{
     content: "";
@@ -7,12 +8,16 @@
   }
 }
 
-@mixin posAbs{
+// position absolute
+@mixin posAbs($top, $left, $translateX, $translateY){
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: $top;
+  left: $left;
+  transform: translate($translateX, $translateY);
 }
+
+
+// buttons backgroud floating effect
 @mixin buttonBackgound-after($background-color){
   &::after{
     content: "";
@@ -29,12 +34,49 @@
   }
 
 }
+// box shaddow
+@mixin box-shadow($color1, $color2, $blur, $color3, $opacity){
+  box-shadow:  $color1 $color2 $blur rgba($color3, $opacity);
+}
 
-
+// card image details
 @mixin card-imge($color1, $color2, $image-path) {
   width: 100%;
   height: 25rem;
   object-fit: cover;
   background-image: linear-gradient(to right bottom, $color1, $color2),url($image-path);
   background-size: cover;
+}
+
+// media query manager
+/*
+    breakpoints
+    0px-600px: Phone
+    600px -900px:  tablet portrait
+    900 px -1200px: tablet landscape
+    [1200px -1800px]: this where aor normal style applies
+    1800px + :  big desktop
+
+    $breakpoints choices
+    Phone
+    tab-port
+    tab-land
+    big-desktop
+*/
+
+// em is the best when considering the font-size for media query 1em = 16px
+//to conver pixel to em = px/16
+@mixin respond($breakpoints){
+  @if $breakpoints == phone{
+    @media only screen and (max-width: 37.5em){@content}
+  }
+  @if $breakpoints == tab-port{
+    @media only screen and (max-width: 56.25em){@content}
+  }
+  @if $breakpoints == tab-land{
+    @media only screen and (max-width: 75em){@content}
+  }
+  @if $breakpoints == big-desktop{
+    @media only screen and (min-width: 112.5em){@content}
+  }
 }

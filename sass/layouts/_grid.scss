@@ -3,15 +3,28 @@
 .row{
   max-width: $grid-width;
   margin:0 auto;
-
+  @include respond(tab-port){
+  width: $grid-width-small;
+}
   &:not(:last-child){
     margin-bottom: $grid-space;
+    @include respond(tab-port){
+    margin-bottom: $grid-space-small;
+    }
   }
+
 @include clearfix;
   [class^="column-"]{
     float: left;
     &:not(:last-child){
       margin-right: $grid-gutter;
+      @include respond(tab-port){
+      margin-right:0;
+      margin-bottom: $grid-space-small;
+      }
+    }
+    @include respond(tab-port){
+    width: 100% !important;
     }
   }
 

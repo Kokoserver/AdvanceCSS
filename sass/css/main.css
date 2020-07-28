@@ -10,6 +10,13 @@
   transition: opacity .3s;
 }
 
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  .popup {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .popup:target {
   opacity: 1;
   visibility: visible;
@@ -80,6 +87,14 @@
   -moz-column-rule: .1rem solid #e3e3e3;
   -moz-hyphens: auto;
   hyphens: auto;
+}
+
+@media (max-width: 37.5em) {
+  .popup__text {
+    -moz-column-count: 0;
+    column-count: 0;
+    hyphens: none;
+  }
 }
 
 .popup__btn {

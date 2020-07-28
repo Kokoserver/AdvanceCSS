@@ -6,8 +6,27 @@
   box-sizing: inherit;
 }
 
+// ORDER: base + typography > general layout + grid + page layout > components
 html{
-font-size: 62.5%;
+
+font-size: 62.5%; // default font-size 1rem;  ==> 10px/16px
+// always put the larger media query before smaller one
+@include respond(tab-land){ // width < 1200?
+  font-size: 56.25%;  // 1rem = 9px ==> 9px/16px
+}
+
+@include respond(tab-port){// width < 900?
+  font-size: 50%;  // 1rem = 8px ==> 8px/16px
+}
+
+// @include respond(phone){// width > 600?
+//   font-size: 30%;  // 1rem = 8px ==> 8px/16px
+// }
+
+@include respond(big-desktop){
+  font-size: 75%; // 1rem = 10px ==> 10px/16px
+
+}
 }
 
 body{
@@ -15,9 +34,17 @@ body{
   line-height: 1.7;
   font-weight: 300;
   box-sizing: border-box;
-  padding:.5 3rem;
+  padding:0 3rem;
   background-color: $primary-light;
-  overflow-x: hidden;
+  @include respond(tab-port){// width < 900?
+    padding: 0; // 1rem = 8px ==> 8px/16px
+  }
+
+}
+
+::selection{
+  background-color: $secondary;
+  color: $primary;
 }
 
 img{

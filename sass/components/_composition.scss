@@ -1,44 +1,66 @@
 //main:../main.scss
 .composition{
   position: relative;
-  animation: fadeInLeft 3s;
+  animation: fadeInRight 3s;
 &__img-box{
-  display: inline-block;
+  width: 100%;
   backface-visibility: hidden;
-  padding-right: 2rem;
+  @include respond(tab-port){
+  margin-top: 4rem;
+  }
 
 }
+
+
 
 &__img{
   width: 70%;
   position: absolute;
-  box-shadow: 0 1rem 2rem rgba($black, .9);
+  @include box-shadow(0, 1rem,2rem, $black, .3 )
   transition: transform .3s;
   border-radius: .1rem;
+  @include respond(tab-port){
+    position: relative;
+    float: right;
+    width: 33.3%;;
+    @include box-shadow(0, 1rem,2rem, $black, .3 )
+  }
 
 
   &--1{
-    &:hover{
-       transform: scale(1.2) translateY(2rem);
-    }
     backface-visibility: hidden;
+    &:hover{transform: scale(1.2) translateY(2rem);}
     top: 7rem;
-    right: 1rem;
+    @include respond(tab-port){
+      top: 0;
+      left: -4rem;
+      transition: scale(1.2);
+    }
   }
   &--2{
     top: 9rem;
-    left: 10rem;
+    left: 20%;
     backface-visibility: hidden;
     &:hover{
-       transform: scale(1.2) translateY(2rem);
+       transform: scale(1.3) translateY(2rem);
+    }
+    @include respond(tab-port){
+      top: -1rem;
+      left: 0rem;
+      z-index: 15;
+      transition: scale(1.5);
     }
   }
   &--3{
     top: 13.7rem;
-    right: 11rem;
     backface-visibility: hidden;
     &:hover{
-       transform: scale(1.2) translateY(2rem);
+       transform: scale(1.4) translateY(2rem);
+    }
+    @include respond(tab-port){
+      top: 0;
+      left: 4rem;
+      transition: scale(1.2);
     }
   }
 }

@@ -1,13 +1,18 @@
 //main:../main.scss
 .section__about{
-  width: 100%;
-  padding: $default-padding;
-  background-image: url(../images/about-cover-6.png);
+  padding: 50rem 0;
+  background-image: url(../images/about-cover-7.png);
+  margin-top: -40rem;
   text-align: left;
-  padding-top: 25rem;
+  padding-bottom: 20rem;
+  @include respond(tab-port){
+      width: 100%;
+      padding: 46rem 0;
+      padding-bottom: 20rem;
+      text-align: center;
+  }
 &__about-text-box{
-  animation: fadeInRight 3s ease;
-  padding-bottom: 1.5rem;
+  animation: fadeInLeft 3s ease;
 }
 }
 .section__services{
@@ -23,6 +28,10 @@ text-align: center;
   padding: 0 5rem;
   font-size: 2.4rem;
   margin-bottom: 5rem;
+  @include respond(phone){
+    font-size: 1.7rem;
+  }
+
 }
 }
 .work__sample{
@@ -41,7 +50,9 @@ text-align: center;
         font-size: 2.2rem;
         font-weight: 400;
         padding: 0 10rem;
-
+        @include respond(phone){
+          font-size: 1.6rem;
+        }
       }
     }
     &-nav{
@@ -61,14 +72,19 @@ text-align: center;
         }
       }
       &-link,&-link:visited, &-link:link {
+
         font-size: 2rem;
         text-decoration: none;
         display: inline-block;
-        font-weight: 700;
+        font-weight:400;
         color: inherit;
         text-transform: uppercase;
         padding:2rem;
         transition: background-color .8s;
+        @include respond(phone){
+          font-size: 1.3rem;
+          padding:.5rem;
+        }
       }
       &-link:hover{
         color: $white;
@@ -80,7 +96,7 @@ text-align: center;
     }
 &-img{
   width: 100%;
-  box-shadow: 0 1rem 2rem rgba($black, .9);
+  @include box-shadow(0, 1rem,2rem, $black, .9 )
   transition: transform .3s;
   border-radius: .5rem;
 }
@@ -88,6 +104,12 @@ text-align: center;
 &-img-big{
   width:135% !important;
   height: 40rem;
+  @include respond(phone){
+  width:100% !important;
+  }
+  @include respond(tab-port){
+  width:100% !important;
+  }
 }
 }
 .section-ads{
@@ -101,6 +123,9 @@ text-align: center;
   &-heading{
     font-size: 4rem;
     color: $white;
+    @include respond(phone){
+    font-size: 2rem;
+    }
   }
 }
 
@@ -122,12 +147,19 @@ text-align: center;
       font-size: 1.7rem;
        word-wrap: break-word;
        font-weight: bold;
+       @include respond(phone){
+         font-size: 1.5rem;
+         font-weight: normal;
+       }
     }
 
 &-details ul,li{
   padding-bottom: 5rem;
   text-align: left;
   text-transform: capitalize;
+  @include respond(phone){
+  display: inline-block;
+  }
 }
 
  #social-link a:link, a:visited {

@@ -49,6 +49,8 @@
         <div class="navbar__logo-box">
           <a href="#"><img src="images/logo-light.png" class="navbar__logo" alt="logo"></a>
         </div>
+          <input type="checkbox" id="navbar-toggle">
+          <label for="navbar-toggle" class="navbar-menu">Menu</label>
         <ul class="navbar__list">
           <li class="navbar__item">
             <a href="#" class="navbar__link">home</a>
@@ -79,32 +81,35 @@
   </header>
   <main>
     <section class="section__about" id="section__about">
-      <div class="row">
-        <div class="column-6">
-        <div class="composition">
-          <div class="composition__img-box">
-            <img src="images/hero-2.jpg" alt="" class="composition__img composition__img--1">
-            <img src="images/hero.jpg" alt="" class="composition__img composition__img--2">
-            <img src="images/hero.jpg" alt="" class="composition__img composition__img--3">
+      <div class="container">
+        <div class="row">
+          <div class="column-6">
+            <div class="section__about__about-text-box">
+              <h1 class="section-heading" >About me</h1>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                culpa odio sint aliquam voluptatem maiores repellendus nemo architecto
+                ipsum delectus aperiam autem, eos, deserunt quae. Unde voluptates itaque
+              </p>
+              <p class="paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
+                culpa odio sint aliquam voluptatem maiores repellendus nemo architecto
+                ipsum delectus aperiam autem, eos, deserunt quae. Unde voluptates itaque
+              </p>
+              <a href="#" class=" btn-animated btn-inverse btn-medium">Read more &rarr;</a>
+            </div>
           </div>
-        </div>
-        </div>
-        <div class="column-6">
-          <div class="section__about__about-text-box">
-            <h1 class="section-heading" >About me</h1>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
-              culpa odio sint aliquam voluptatem maiores repellendus nemo architecto
-              ipsum delectus aperiam autem, eos, deserunt quae. Unde voluptates itaque
-            </p>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus
-              culpa odio sint aliquam voluptatem maiores repellendus nemo architecto
-              ipsum delectus aperiam autem, eos, deserunt quae. Unde voluptates itaque
-            </p>
-            <a href="#" class=" btn-animated btn-inverse btn-medium">Read more &rarr;</a>
+          <div class="column-6">
+          <div class="composition">
+            <div class="composition__img-box">
+              <img src="images/hero-2.jpg" alt="" class="composition__img composition__img--1">
+              <img src="images/hero.jpg" alt="" class="composition__img composition__img--2">
+              <img src="images/hero.jpg" alt="" class="composition__img composition__img--3">
+            </div>
           </div>
-        </div>
+          </div>
+
+      </div>
       </div>
     </section>
 <section class="section__services" id="section__services">
@@ -173,14 +178,12 @@
    <div class="container">
     <h1 class="work__sample-title section-heading">Latest work</h1>
     <div class="work__sample-text-box">
-     <div class="container-small">
-       <p class="work__sample-text-box__text paragraph">
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-         Molestiae sunt fugit, perspiciatis incidunt. Saepe ducimus vel officiis, ipsam beatae neque.
-         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-         Molestiae sunt fugit, perspiciatis incidunt. Saepe ducimus vel officiis, ipsam beatae neque.
-       </p>
-     </div>
+       <div class="container">
+         <p class="work__sample-text-box__text paragraph">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Molestiae sunt fugit, perspiciatis
+         </p>
+       </div>
      </div>
      <div class="work__sample-nav">
       <div class="navig">
@@ -222,12 +225,9 @@
     <section class="section__experince" id="section__experince">
         <h1 class="section__experince-heading section-heading">My working experince</h1>
         <div class="section__experince-short-text">
-        <div class="container-small">
           <p class="section__experince-short-text">
             Lorem ipsum dolor sit amet,
-             consectetur adipisicing elit. Voluptatum placeat alias, consequuntur
-            saepe iste excepturi tenetur dignissimos ipsa modi iure.</p>
-        </div>
+             consectetur adipisicing elit. Voluptatum placeat alias, consequuntur</p>
         </div>
         <div class="row">
           <div class="column-4">
@@ -283,11 +283,9 @@
               </li>
               <ul>
                 <li>
-                  (+234)9071133025
+                  (+234)9071133025,
                 </li>
-                <li>
-                  (+234)9056983167
-                </li>
+
                 <div id="social-link">
                   <h3>Follow me</h3>
                   <a href="https://www.facebook.com/Kokoserver-2204221133139056" target="_blank"><i class="fab fa-facebook-square"></i></a>
